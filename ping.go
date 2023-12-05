@@ -31,6 +31,9 @@ import (
 // connection passed in to avoid race condition on shutdown
 func keepalive(c *client, conn io.Writer) {
 	defer c.workers.Done()
+
+	return
+
 	DEBUG.Println(PNG, "keepalive starting")
 	var checkInterval time.Duration
 	var pingSent time.Time
